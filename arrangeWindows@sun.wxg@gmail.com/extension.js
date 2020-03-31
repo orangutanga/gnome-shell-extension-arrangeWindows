@@ -107,8 +107,8 @@ class ArrangeMenu extends PanelMenu.Button {
         
         let widthAvailable = workArea.width * WINDOW_USAGE_PERCENTAGE;
         let heightAvailable = workArea.height * WINDOW_USAGE_PERCENTAGE;
-        let x = workArea.x + workArea.width * WINDOW_USAGE_PERCENTAGE * 0.5;
-        let y = workArea.y + workArea.height * WINDOW_USAGE_PERCENTAGE * 0.5;
+        let x = workArea.x + workArea.width * (1-WINDOW_USAGE_PERCENTAGE) * 0.5;
+        let y = workArea.y + workArea.height * (1-WINDOW_USAGE_PERCENTAGE) * 0.5;
         let width = widthAvailable - ((windows.length-1)*CASCADE_WIDTH);
         let height = heightAvailable - ((windows.length-1)*CASCADE_HEIGHT);
 
