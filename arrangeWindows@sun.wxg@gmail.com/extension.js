@@ -106,16 +106,12 @@ class ArrangeMenu extends PanelMenu.Button {
         let workArea = this.getWorkArea(windows[0]);
         
         let widthAvailable = workArea.width * WINDOW_USAGE_PERCENTAGE;
-		let heightAvailable = workArea.height * WINDOW_USAGE_PERCENTAGE;
-		let x = workArea.x + workArea.width * WINDOW_USAGE_PERCENTAGE * 0.5;
-		let y = workArea.y + workArea.height * WINDOW_USAGE_PERCENTAGE * 0.5;
-		let width = widthAvailable - ((windows.length-1)*CASCADE_WIDTH);
-		let height = heightAvailable - ((windows.length-1)*CASCADE_HEIGHT);
+        let heightAvailable = workArea.height * WINDOW_USAGE_PERCENTAGE;
+        let x = workArea.x + workArea.width * WINDOW_USAGE_PERCENTAGE * 0.5;
+        let y = workArea.y + workArea.height * WINDOW_USAGE_PERCENTAGE * 0.5;
+        let width = widthAvailable - ((windows.length-1)*CASCADE_WIDTH);
+        let height = heightAvailable - ((windows.length-1)*CASCADE_HEIGHT);
 
-        //let y = workArea.y + 5;
-        //let x = workArea.x + 10;
-        //let width = workArea.width * 0.7;
-        //let height = workArea.height * 0.7;
         for (let i = 0; i < windows.length; i++) {
             let win = windows[i].get_meta_window();
             win.unmaximize(Meta.MaximizeFlags.BOTH);
